@@ -10,21 +10,18 @@ public class View {
     public static List<String> readCarNames() {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
         String input = Console.readLine();
-
-        // 단순 입력만
         return Arrays.stream(input.split(",")).map(String::trim).collect(Collectors.toList());
     }
 
     public static int readTryCount() {
         System.out.println("시도할 횟수는 몇 회인가요?");
         String input = Console.readLine();
-        return Integer.parseInt(input); // 아직 검증은 X
+        return Integer.parseInt(input);
     }
 
     public static void printResultTitle() {
         System.out.println("\n실행 결과");
     }
-
 
     public static void printRoundResult(List<String> results) {
         for (String result : results) {

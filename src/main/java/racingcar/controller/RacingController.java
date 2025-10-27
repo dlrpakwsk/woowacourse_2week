@@ -15,11 +15,7 @@ public class RacingController {
 
         for (int i = 0; i < tryCount; i++) {
             racingGame.playRound();
-            View.printRoundResult(
-                    racingGame.getCars().stream()
-                            .map(Car::toString)
-                            .toList()
-            );
+            View.printRoundResult(racingGame.getCars().stream().map(Car::toString).toList());
         }
 
         List<String> winners = racingGame.findWinners();
